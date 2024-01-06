@@ -29,12 +29,8 @@ const LoginPage = () => {
       className="bg-cover bg-center h-screen w-screen flex items-center justify-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* <div
-        className="py-3 text-center rounded-lg h-4/6 min-h-96 w-4/6 max-w-96 grid grid-cols-1 gap-2
-      justify-items-center backdrop-filter backdrop-blur " h-4/6 min-h-96
-      > */}
       <div
-        className="text-center rounded-lg h-96 w-4/6 max-w-96 flex flex-col
+        className="text-center rounded-lg h-96 w-[80%] max-w-96 flex flex-col
         items-center justify-evenly backdrop-filter backdrop-blur "
       >
         <h1 className=" animate-jump-in animate-delay-300 animate-once font-bold text-5xl ">
@@ -43,60 +39,57 @@ const LoginPage = () => {
         <input
           type="text"
           placeholder="Email"
-          className="px-2 rounded-lg w-4/5 aspect-[100/14] bg-gray-300"
+          className="px-2 rounded-lg w-[80%] h-[9%]  bg-gray-300"
         ></input>
 
-        {/*-------------------------------------------- پسورد --------------------------------------------*/}
-        {/* <div className="grid grid-cols-[9fr_1fr] items-center "> */}
-        <div className="flex flex-row gap-x-2 items-center ">
+        {/*-------------------------------------------- PASSWORD --------------------------------------------*/}
+        <div className="grid grid-cols-[12fr_1fr] justify-center items-center ">
+          {/* <div className="flex flex-row gap-x-2 items-center "> */}
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="px-2 rounded-lg aspect-[100/21] bg-gray-300 "
+            className="px-2 ml-6 rounded-lg justify-self-center w-[85%] h-[165%] bg-gray-300 "
           ></input>
-          <div
-            onClick={togglePasswordVisibility}
-            className="justify-self-center "
-          >
+          <div onClick={togglePasswordVisibility} className="mr-5">
             <IoMdEye
-              className={`size-11 text-gray-700 ${
+              className={`scale-150 text-gray-700 ${
                 showPassword ? "block" : "hidden"
               }`}
             />
             <IoMdEyeOff
-              className={`size-11 text-gray-700 ${
+              className={`scale-150 text-gray-700 ${
                 showPassword ? "hidden" : "block"
               }`}
             />
           </div>
         </div>
-        {/*-------------------------------------------- پسورد --------------------------------------------*/}
+        {/*-------------------------------------------- PASSWORD --------------------------------------------*/}
 
-        <Button moreClass="w-4/5 aspect-[100/14]">Login</Button>
+        <Button moreClass="w-[80%] h-[9%]">Login</Button>
 
-        {/*-------------------------------------------- یا --------------------------------------------*/}
+        {/*-------------------------------------------- OR --------------------------------------------*/}
         <div className="grid grid-cols-3 items-center text-gray-500">
           <hr className="border-gray-500 " />
           <span className="text-center text-sm mx-7 -my-3 ">OR</span>
           <hr className="border-gray-500" />
         </div>
-        {/*-------------------------------------------- یا --------------------------------------------*/}
+        {/*-------------------------------------------- OR --------------------------------------------*/}
 
-        {/*-------------------------------------------- گوگل --------------------------------------------*/}
-        <Button moreClass="flex flex-row bg-white w-4/5 aspect-[100/14] rounded-xl justify-center items-center ">
-          <span className="">Login via</span>
-          <FcGoogle className="size-8 animate-spin animate-once animate-duration-[2000ms] animate-delay-300 animate-ease-in-out" />
+        {/*-------------------------------------------- GOOGLE --------------------------------------------*/}
+        <Button moreClass="flex flex-row bg-white w-[80%] h-[9%] rounded-xl justify-center items-center">
+          <span className="mr-2">Login via</span>
+          <FcGoogle className="size-6 animate-spin animate-once animate-duration-[2000ms] animate-delay-300 animate-ease-in-out" />
         </Button>
-        {/*-------------------------------------------- گوگل --------------------------------------------*/}
+        {/*-------------------------------------------- GOOGLE --------------------------------------------*/}
 
-        {/*-------------------------------------------- ثبتنام --------------------------------------------*/}
+        {/*-------------------------------------------- REGISTER --------------------------------------------*/}
         <div className="my-3">
           <span className="text-gray-500 text-sm">
             If you don't have an account:
           </span>
-          <Button moreClass="w-8/12 aspect-[100/22]">Register</Button>
+          <Button moreClass="w-[80%] h-[80%]">Register</Button>
         </div>
-        {/*-------------------------------------------- ثبتنام --------------------------------------------*/}
+        {/*-------------------------------------------- REGISTER --------------------------------------------*/}
       </div>
     </div>
   );
